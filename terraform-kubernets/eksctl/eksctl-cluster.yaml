@@ -1,0 +1,33 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: tech-challenge
+  region: sa-east-1
+  version: "1.31"
+
+vpc:
+  id: vpc-0a76831510c31af51
+  cidr: 172.31.0.0/16
+  subnets:
+    public:
+      sa-east-1a:
+        id: subnet-07353395f919ced1a
+      sa-east-1b:
+        id: subnet-0a41d64838503ddae
+      sa-east-1c:
+        id: subnet-056e5e5f5a523f937
+
+managedNodeGroups:
+  - name: tech-challenge-nodes
+    instanceType: t3.micro
+    desiredCapacity: 1
+    minSize: 1
+    maxSize: 1
+    volumeSize: 20
+    ssh:
+      allow: false
+
+cloudWatch:
+  clusterLogging:
+    enableTypes: ["*"]

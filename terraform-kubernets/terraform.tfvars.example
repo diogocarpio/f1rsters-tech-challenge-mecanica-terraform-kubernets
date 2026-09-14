@@ -1,0 +1,13 @@
+# Copie este arquivo para terraform.tfvars e preencha os valores
+
+aws_region   = "sa-east-1"
+project_name = "f1rsters-tech-challenge-mecanica"
+environment  = "dev"
+
+# Observabilidade New Relic
+enable_newrelic      = true
+newrelic_account_id  = 12345678
+newrelic_api_key     = "NRAK-..."
+newrelic_license_key = "NRII-..."
+newrelic_region      = "US"
+eks_cluster_name     = "tech-challenge"
