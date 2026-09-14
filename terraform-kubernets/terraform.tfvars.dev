@@ -1,0 +1,10 @@
+# Ambiente de desenvolvimento
+aws_region   = "sa-east-1"
+project_name = "f1rsters-tech-challenge-mecanica"
+environment  = "dev"
+
+enable_newrelic = false
+newrelic_region = "US"
+# newrelic_account_id, newrelic_api_key, newrelic_license_key e
+# eks_cluster_name sao carregados dos GitHub Secrets: NEW_RELIC_ACCOUNT_ID,
+# NEW_RELIC_API_KEY, NEW_RELIC_LICENSE_KEY, EKS_CLUSTER_NAME (quando presentes)
